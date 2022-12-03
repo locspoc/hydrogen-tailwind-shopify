@@ -50,3 +50,20 @@ Initial commit
 yarn create @shopify/hydrogen
 https://shopify.dev/custom-storefronts/hydrogen/getting-started/quickstart
 ```
+
+# 2. Install Tailwind CSS With PostCSS And Autoprefixer
+
+```
+npm install -D tailwindcss postcss autoprefixer
+
+npx tailwindcss init -p
+
+https://www.youtube.com/watch?v=O3_qDL4Ls_s
+
+src/index.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+```
