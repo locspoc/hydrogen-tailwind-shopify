@@ -29,6 +29,18 @@ export default function Layout({ children }) {
 							{shop.name}
 						</Link>
 						<div>
+							<Link to="/catalog" className="p-2">
+								Catalog
+							</Link>
+							<Link to="/collections/frontpage" className="p-2">
+								Front Page
+							</Link>
+							<Link to="/collections/test1" className="p-2">
+								Test 1
+							</Link>
+							<Link to="/collections/test2" className="p-2">
+								Test 2
+							</Link>
 							<Link to="/cart" className="p-2">
 								Cart
 							</Link>

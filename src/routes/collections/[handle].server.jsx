@@ -1,8 +1,10 @@
 import {
 	useShopQuery,
-	CacheLong,
 	gql,
+	CacheLong,
+	CacheNone,
 	useRouteParams,
+	Seo,
 } from '@shopify/hydrogen';
 import { Suspense } from 'react';
 
@@ -11,38 +13,38 @@ import ProductCard from '../../components/ProductCard.server';
 
 export default function Collection() {
 	const { handle } = useRouteParams();
-	console.log('handle: ', handle);
+	// console.log('handle: ', handle);
 
 	const data = useShopQuery({
 		query: QUERY,
 		cache: CacheLong(),
 		preload: true,
-		variable: {
+		variables: {
 			handle,
 		},
 	});
 
-	console.log(data);
+	// console.log(data);
 
-	// const {
-	// 	data: {
-	// 		collections: {
-	// 			products: { nodes },
-	// 		},
-	// 	},
-	// } = data;
+	const {
+		data: { collection: collection },
+	} = data;
+
+	const {
+		products: { nodes },
+	} = collection;
 
 	return (
 		<Layout>
 			<Suspense>
-				{/* <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+				<div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 					{nodes.map((product) => (
 						<ProductCard
 							key={product.handle}
 							product={product}
 						></ProductCard>
 					))}
-				</div> */}
+				</div>
 			</Suspense>
 		</Layout>
 	);

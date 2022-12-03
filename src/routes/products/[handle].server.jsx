@@ -9,10 +9,21 @@ import {
 import { Suspense } from 'react';
 
 import Layout from '../../components/Layout.server';
-// import ProductDetails from '../../components/ProductDetails.client';
+import ProductDetails from '../../components/ProductDetails.client';
 
 export default function Product() {
 	const { handle } = useRouteParams();
+
+	const data = useShopQuery({
+		query: QUERY,
+		cache: CacheLong(),
+		preload: true,
+		variables: {
+			handle,
+		},
+	});
+
+	// console.log(data);
 
 	const {
 		data: { product: product },
@@ -24,14 +35,14 @@ export default function Product() {
 		cache: CacheNone(),
 	});
 
+	// console.log(product);
+
 	return (
-		<Layout>
+		<Layout title={product.title}>
 			<Suspense>
 				<Seo type="product" data={product} />
+				<ProductDetails product={product} />
 			</Suspense>
-			<div className="product-page container">
-				{/* <ProductDetails product={product} /> */}
-			</div>
 		</Layout>
 	);
 }
