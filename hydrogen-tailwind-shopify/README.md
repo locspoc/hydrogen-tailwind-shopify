@@ -12,8 +12,8 @@ Hydrogen is a React framework and SDK that you can use to build fast and dynamic
 
 **Requirements:**
 
--   Node.js version 16.14.0 or higher
--   Yarn
+- Node.js version 16.14.0 or higher
+- Yarn
 
 ```bash
 npm init @shopify/hydrogen@latest --template hello-world-ts
@@ -34,19 +34,4 @@ To run a local preview of your Hydrogen app in an environment similar to Oxygen,
 ```bash
 yarn build
 yarn preview
-```
-
-# hydrogen-tailwind-shopify
-
-Hydrogen Tailwind Shopify
-
-# Testing
-
-Initial commit
-
-# 1. Install Hydrogen
-
-```
-yarn create @shopify/hydrogen
-https://shopify.dev/custom-storefronts/hydrogen/getting-started/quickstart
 ```
