@@ -11,6 +11,7 @@ import ProductCard from '../../components/ProductCard.server';
 
 export default function Collection() {
 	const { handle } = useRouteParams();
+	console.log('handle: ', handle);
 
 	const data = useShopQuery({
 		query: QUERY,
