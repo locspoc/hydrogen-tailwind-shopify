@@ -38,11 +38,11 @@ export default function Layout({ children }) {
 						</div>
 					</nav>
 				</header>
-				<main className="container m-auto mt-4 mx-4">
+				<main className="container m-auto mt-4">
 					<Suspense>{children}</Suspense>
 				</main>
 				<footer className="flex h-10 justify-center items-center shadow-inner">
-					footer<p>Copyright © 2022 NTE</p>
+					<p>Copyright © 2022 {shop.name}</p>
 				</footer>
 			</div>
 		</>

@@ -67,3 +67,15 @@ src/index.css
 @tailwind utilities;
 
 ```
+
+# 3. GraphIQL
+
+```
+http://localhost:3000/graphiql
+```
+
+# 4. Caching Issue
+
+```
+yarn dev --force
+```
