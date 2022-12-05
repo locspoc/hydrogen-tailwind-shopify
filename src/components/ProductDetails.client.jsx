@@ -23,7 +23,7 @@ export default function ProductDetails({ product }) {
 				<div className="md:col-span-2">
 					<Image
 						data={product.media.nodes[0].image}
-						altText={product.media.nodes[0].image.altText}
+						// altText={product.media.nodes[0].image.altText}
 						className="product-page-image"
 					/>
 				</div>
@@ -73,7 +73,13 @@ function ProductForm({ product }) {
 				{/* <AddToCartButton disabled={isOutOfStock} className="add-to-cart">
 				{isOutOfStock ? 'Out of stock' : 'Add to cart'}
 			</AddToCartButton> */}
-				<button className="primary-button w-full">Add To Cart</button>
+				<AddToCartButton
+					disabled={isOutOfStock}
+					className="primary-button w-full"
+				>
+					{isOutOfStock ? 'Out Of Stock' : 'Add To Cart'}
+				</AddToCartButton>
+				{/* <button className="primary-button w-full">Add To Cart</button> */}
 			</div>
 		</>
 	);
