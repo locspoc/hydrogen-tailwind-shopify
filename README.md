@@ -79,3 +79,9 @@ http://localhost:3000/graphiql
 ```
 yarn dev --force
 ```
+
+# 5. Install Hero Icons
+
+```
+npm i @heroicons/react
+```
