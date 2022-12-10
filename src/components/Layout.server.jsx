@@ -37,11 +37,8 @@ export default function Layout({ children }) {
 							<Link to="/collections/frontpage" className="p-2">
 								Front Page
 							</Link>
-							<Link to="/collections/test1" className="p-2">
-								Test 1
-							</Link>
-							<Link to="/collections/test2" className="p-2">
-								Test 2
+							<Link to="/blog" className="p-2">
+								Blog
 							</Link>
 						</div>
 						<div className="flex">
