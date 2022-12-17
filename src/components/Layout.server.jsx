@@ -59,7 +59,8 @@ export default function Layout({ children }) {
 								</svg>
 								<CartBubble />
 							</Link>
-							<Link to="/login" className="p-2">
+							{/* TODO: How to show login or register based on user login status? */}
+							<Link to="/account/login" className="p-2">
 								Login
 							</Link>
 						</div>

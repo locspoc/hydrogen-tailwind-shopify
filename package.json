@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.13",
-    "@shopify/hydrogen": "^1.6.4",
+    "@shopify/hydrogen": "^1.6.5",
+    "js-cookie": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
